@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Violette - Ton assistante RH AFPJR</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f8f5ff 0%, #fff9f5 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 20px 20px;
+        }
+        
+        .logo-afpjr {
+            font-size: 24px;
+            color: #53377F;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        
+        .hero {
+            background: white;
+            border-radius: 30px;
+            padding: 50px 40px;
+            box-shadow: 0 10px 40px rgba(83, 55, 127, 0.1);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .violette-avatar {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 30px;
+            animation: float 3s ease-in-out infinite;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        h1 {
+            color: #53377F;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        
+        .welcome-text {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #53377F 0%, #7856a3 100%);
+            color: white;
+            padding: 18px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(83, 55, 127, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(83, 55, 127, 0.4);
+        }
+        
+        .features {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(83, 55, 127, 0.08);
+        }
+        
+        .features h2 {
+            color: #53377F;
+            margin-bottom: 25px;
+            font-size: 1.8em;
+            text-align: center;
+        }
+        
+        .question-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .question-list li {
+            background: linear-gradient(135deg, #f8f5ff 0%, #fff9f5 100%);
+            padding: 15px 20px;
+            margin: 12px 0;
+            border-radius: 12px;
+            border-left: 4px solid #F7941D;
+            transition: all 0.3s ease;
+        }
+        
+        .question-list li:hover {
+            transform: translateX(5px);
+            border-left-color: #53377F;
+        }
+        
+        .question-list li::before {
+            content: "💬";
+            margin-right: 10px;
+        }
+        
+        .instructions {
+            background: linear-gradient(135deg, #53377F 0%, #7856a3 100%);
+            color: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .instructions h2 {
+            margin-bottom: 20px;
+            font-size: 1.6em;
+        }
+        
+        .steps {
+            list-style: none;
+            counter-reset: step-counter;
+        }
+        
+        .steps li {
+            counter-increment: step-counter;
+            margin: 15px 0;
+            padding-left: 40px;
+            position: relative;
+        }
+        
+        .steps li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            background: #F7941D;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .info-box {
+            background: #fff9f5;
+            border-left: 4px solid #F7941D;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        
+        .info-box strong {
+            color: #53377F;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .hero {
+                padding: 30px 20px;
+            }
+            
+            .features, .instructions {
+                padding: 25px;
+            }
+            
+            .cta-button {
+                padding: 15px 35px;
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-afpjr">AFPJR</div>
+        </header>
+        
+        <div class="hero">
+            <img src="images/violette-photo.png" alt="Violette" class="violette-avatar">
+            
+            <h1>Salut, moi c'est Violette ! 🌼</h1>
+            
+            <p class="welcome-text">
+                Je suis ton assistante RH personnelle, disponible 24h/24 pour répondre à toutes tes questions. 
+                Que ce soit sur tes congés, ton bulletin de salaire, ou tes droits... je suis là pour t'accompagner avec le sourire ! 
+                Plus besoin d'attendre, discutons ensemble ! 💜
+            </p>
+            
+            <a href="https://chatgpt.com/g/g-68dd459fa3d88191844650e4a60f0118-violette" target="_blank" class="cta-button">
+                💬 Discuter avec Violette
+            </a>
+        </div>
+        
+        <div class="features">
+            <h2>Je peux t'aider avec tes questions RH 🌟</h2>
+            <ul class="question-list">
+                <li>Combien de jours d'absence pour enfant malade je bénéficie ?</li>
+                <li>Est-ce que j'ai des congés liés à l'ancienneté ?</li>
+                <li>Est-ce que j'ai le droit au maintien de salaire lors de mon arrêt maladie ?</li>
+                <li>Où puis-je récupérer mon bulletin de salaire ?</li>
+                <li>De combien est mon préavis si je pars à la retraite ?</li>
+            </ul>
+        </div>
+        
+        <div class="instructions">
+            <h2>🚀 Première fois ? C'est très simple !</h2>
+            <ol class="steps">
+                <li>Clique sur le bouton "Discuter avec Violette" ci-dessus</li>
+                <li>Si tu n'as pas encore de compte ChatGPT, crée-en un gratuitement (il te faut juste un email)</li>
+                <li>Une fois connecté, tu peux directement poser ta question à Violette</li>
+                <li>Elle te répondra instantanément, comme si tu discutais avec un collègue !</li>
+            </ol>
+            
+            <div class="info-box">
+                <strong>💡 Bon à savoir :</strong> Violette est disponible gratuitement ! Tu peux lui poser jusqu'à 40 questions toutes les 3 heures. Parle-lui naturellement, comme tu le ferais avec l'équipe RH.
+            </div>
+        </div>
+        
+        <footer>
+            <p>Une question ? Un problème technique ? Contacte l'équipe RH de l'AFPJR</p>
+            <p style="margin-top: 10px; color: #53377F;">🌼 Violette est là pour toi !</p>
+        </footer>
+    </div>
+</body>
+</html>
